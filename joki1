@@ -43,7 +43,7 @@
       </div>
       <div class="p-6 rounded-lg glass">
         <h3 class="text-xl font-semibold neon">Liga</h3>
-        <p class="mt-2 text-slate-300">Rp 1.000 – 3.000 / Stage</p>
+        <p class="mt-2 text-slate-300">Rp 1.000 – Rp 5.000 / Stage</p>
       </div>
       <div class="p-6 rounded-lg glass">
         <h3 class="text-xl font-semibold neon">Rank</h3>
@@ -51,7 +51,7 @@
       </div>
       <div class="p-6 rounded-lg glass">
         <h3 class="text-xl font-semibold neon">Achievement</h3>
-        <p class="mt-2 text-slate-300">Rp 1.000 – 5.000</p>
+        <p class="mt-2 text-slate-300">Rp 1.000 – Rp 5.000</p>
       </div>
     </section>
 
