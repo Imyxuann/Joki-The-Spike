@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RosStore — Starter Template</title>
-  <meta name="description" content="Starter one-file template inspired by rosstoreid.com — hero, product grid, leaderboard, payments, contact." />
+  <title>ImYxuann — Ridwan Akbar Maolana</title>
+  <meta name="description" content="Ridwan Akbar Maolana — hero, product grid, leaderboard, payments, contact." />
   <style>
     :root{--accent:#ff4d4f;--dark:#0f1724;--muted:#6b7280;--card:#0b1220}
     *{box-sizing:border-box}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;background:#071023;color:#e6eef8}
@@ -52,9 +52,9 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <div class="mark">RS</div>
+        <div class="yxuannstore" alt="logo yxuannstore.png" class="h-14 w-auto rounded-lg">
         <div>
-          <div style="font-weight:800">RosStoreID</div>
+          <div style="font-weight:800">yxuannstore</div>
           <div style="font-size:12px;color:var(--muted)">Since 2017 — aman & cepat</div>
         </div>
       </div>
@@ -75,7 +75,7 @@
         <a class="btn primary" href="#products">Lihat Produk</a>
         <div style="height:16px"></div>
         <div class="card">
-          <strong>SEDANG FLASH SALE</strong>
+          <strong>FLASH SALE</strong>
           <div style="height:8px"></div>
           <div class="countdown" id="countdown">
             <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Jam</div></div>
@@ -89,9 +89,9 @@
         <h3 style="margin-top:0">Pilihan Produk</h3>
         <div style="height:10px"></div>
         <div class="grid">
-          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Robux Instant</h4><div class="muted">Topup cepat via API</div><div class="price">R$ 10.000</div></div>
-          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Roblox Premium</h4><div class="muted">Langganan premium</div><div class="price">R$ 25.000</div></div>
-          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Giftcard</h4><div class="muted">Voucher resmi</div><div class="price">R$ 50.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Robux Instant</h4><div class="muted">Topup cepat via API</div><div class="price">Rp. 90.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Roblox Premium</h4><div class="muted">Langganan premium</div><div class="price">Rp. 185.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Giftcard</h4><div class="muted">Voucher resmi</div><div class="price">Rp. 50.000</div></div>
         </div>
       </aside>
     </section>
@@ -100,9 +100,9 @@
       <h2>Pembeli Robux Mingguan Teratas</h2>
       <div style="height:12px"></div>
       <div class="leaderboard">
-        <div class="leader"><div class="avatar">1</div><div><strong>das******</strong><div class="muted">Total Robux R$ 50,000 — CHAMPION</div></div></div>
-        <div class="leader"><div class="avatar">2</div><div><strong>lox*****</strong><div class="muted">Total Robux R$ 40,000 — RUNNER-UP</div></div></div>
-        <div class="leader"><div class="avatar">3</div><div><strong>Mr_*****</strong><div class="muted">Total Robux R$ 18,000 — THIRD</div></div></div>
+        <div class="leader"><img src="alberteinstein.jpg"></div></div><div><strong>Albert Einstein</strong><div class="muted">Total Robux Rp. 15.000.000 — Germany</div></div></div>
+        <div class="leader"><img src="hirohito.jpg"></div><div><strong>Hirohito</strong><div class="muted">Total Robux Rp. 2.000.000 — Japan</div></div></div>
+        <div class="leader"><img src="adolfhitler.jpg"></div><div><strong>Adolf Hitler</strong><div class="muted">Total Robux Rp. 5.500.000 — Germany</div></div></div>
       </div>
     </section>
 
@@ -119,8 +119,6 @@
       <h2>Pembayaran</h2>
       <div style="height:10px"></div>
       <div class="payments">
-        <div class="pay">BCA</div>
-        <div class="pay">BNI</div>
         <div class="pay">Gopay</div>
         <div class="pay">Dana</div>
         <div class="pay">OVO</div>
@@ -137,15 +135,15 @@
           <div class="muted">WhatsApp: +62 896-6627-1410</div>
           <div style="height:12px"></div>
           <form onsubmit="alert('Form demo — integrasikan backend untuk berfungsi');return false;">
-            <input placeholder="Nama" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
-            <input placeholder="Email / WA" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <input placeholder="yxuann" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <input placeholder="+62 896-6627-1410" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
             <textarea placeholder="Pesan" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px"></textarea>
             <button class="btn primary" type="submit">Kirim</button>
           </form>
         </div>
         <div style="flex:1;min-width:260px" class="card">
           <strong>Tentang Kami</strong>
-          <p class="muted">Rosstoreid.com adalah penyedia layanan pembelian item dan mata uang digital game secara independen. Kami tidak terkait resmi dengan Roblox Corporation.</p>
+          <p class="muted">yxuannstore adalah penyedia layanan pembelian item dan mata uang digital game secara independen. Kami tidak terkait resmi dengan Roblox Corporation.</p>
         </div>
       </div>
     </section>
@@ -154,7 +152,7 @@
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-      <div class="muted">@2025 All Right Reserved. CV ROSSTOREID</div>
+      <div class="muted">@2025 All Right Reserved. CV YXUANNSTORE</div>
       <div class="muted">Kebijakan Privasi • FAQ</div>
     </div>
   </footer>
