@@ -2,88 +2,173 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yxuannn Store</title>
-  <meta name="description" content="Joki The Spike - Yxuannn Store." />
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RosStore — Starter Template</title>
+  <meta name="description" content="Starter one-file template inspired by rosstoreid.com — hero, product grid, leaderboard, payments, contact." />
   <style>
-    body { background-image: url(logoyxuannn.png); }
-    .glass { background: rgba(0, 0, 30, 0.6); backdrop-filter: blur(6px); border: 1px solid #00e5ff33; }
-    .neon { color: #00e5ff; text-shadow: 0 0 10px #ffffff; }
-    .btn-neon { background: #00e5ff; color: #0a0030; font-weight: bold; }
-    .btn-neon:hover { background: #00b8cc; }
+    :root{--accent:#ff4d4f;--dark:#0f1724;--muted:#6b7280;--card:#0b1220}
+    *{box-sizing:border-box}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;background:#071023;color:#e6eef8}
+    header{background:linear-gradient(90deg,#071023 0%,#0b1330 100%);padding:20px 16px;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9aa2);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:inherit;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--accent);color:#071023}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;padding:48px 0}
+    .hero h1{font-size:28px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn.primary{background:var(--accent);color:#071023}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .countdown{display:flex;gap:8px;font-weight:800}
+    .countdown .seg{background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:8px}
+
+    /* Products */
+    .section{padding:32px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+    .product{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px}
+    .product h4{margin:8px 0 6px;font-size:15px}
+    .price{font-weight:800}
+
+    /* Leaderboard */
+    .leaderboard{display:flex;flex-direction:column;gap:10px}
+    .leader{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent)}
+    .avatar{width:44px;height:44px;border-radius:8px;background:linear-gradient(90deg,#334155,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .muted{color:var(--muted)}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03)}
+    .payments{display:flex;gap:10px;flex-wrap:wrap}
+    .pay{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;font-weight:700}
+
+    /* responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.hero + .card{order:3}}
   </style>
 </head>
-<body class="text-white min-h-screen font-sans">
-
-  <!-- Header -->
-  <header class="max-w-5xl mx-auto p-6 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <!-- Logo -->
-      <img src="tsc-removebg-preview.png" alt="Logoyxuannn" class="h-14 w-auto rounded-lg">
-      <h1 class="text-2xl neon font-extrabold tracking-widest">YXUANN STORE</h1>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="mark">RS</div>
+        <div>
+          <div style="font-weight:800">RosStoreID</div>
+          <div style="font-size:12px;color:var(--muted)">Since 2017 — aman & cepat</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Produk</a>
+        <a href="#leaderboard">Peringkat</a>
+        <a href="#why">Kenapa Beli</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
     </div>
-    <a href="#contact" class="btn-neon px-4 py-2 rounded-lg">Pesan</a>
   </header>
 
-  <!-- Main -->
-  <main class="max-w-4xl mx-auto px-6 py-10">
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Topup Robux & Item Game — Cepat, Aman, Garansi</h1>
+        <p>Dapatkan Robux, Premium, dan item lainnya dengan harga terbaik. Proses cepat — banyak testimoni — bayar lewat transfer, e-wallet, atau minimarket.</p>
+        <a class="btn primary" href="#products">Lihat Produk</a>
+        <div style="height:16px"></div>
+        <div class="card">
+          <strong>SEDANG FLASH SALE</strong>
+          <div style="height:8px"></div>
+          <div class="countdown" id="countdown">
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Jam</div></div>
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Menit</div></div>
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Detik</div></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Hero -->
-    <section class="text-center">
-      <h2 class="text-4xl font-extrabold neon ">Joki The Spike</h2>
-      <p class="mt-3 text-slate-300 neon ">Joki Terpercaya Dengan Harga Yang Murah</p>
+      <aside class="card">
+        <h3 style="margin-top:0">Pilihan Produk</h3>
+        <div style="height:10px"></div>
+        <div class="grid">
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Robux Instant</h4><div class="muted">Topup cepat via API</div><div class="price">R$ 10.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Roblox Premium</h4><div class="muted">Langganan premium</div><div class="price">R$ 25.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Giftcard</h4><div class="muted">Voucher resmi</div><div class="price">R$ 50.000</div></div>
+        </div>
+      </aside>
     </section>
 
-
-    <!-- Pricing -->
-    <section id="pricing" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="p-6 rounded-lg glass">
-        <h3 class="text-xl font-semibold ">Gold</h3>
-        <p class="mt-2 text-slate-300">Rp 5.000 / 100K</p>
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike">saya mau joki</a>
-      </div>
-      <div class="p-6 rounded-lg glass">
-        <h3 class="text-xl font-semibold ">Story</h3>
-        <p class="mt-2 text-slate-300">Rp 1.000 / Level</p>
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike"> saya mau joki</a>
-      </div>
-      <div class="p-6 rounded-lg glass">
-        <h3 class="text-xl font-semibold ">Liga</h3>
-        <p class="mt-2 text-slate-300">Rp 1.000 – 3.000 / Stage</p>
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike"> saya mau joki</a>
-      </div>
-      <div class="p-6 rounded-lg glass">
-        <h3 class="text-xl font-semibold ">Rank</h3>
-        <p class="mt-2 text-slate-300">Tergantung Jumlah Tier</p>
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike"> saya mau joki</a>
-      </div>
-      <div class="p-6 rounded-lg glass">
-        <h3 class="text-xl font-semibold ">Achievement</h3>
-        <p class="mt-2 text-slate-300">Rp 1.000 – 5.000</p>
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike"> saya mau joki</a>
+    <section id="leaderboard" class="section">
+      <h2>Pembeli Robux Mingguan Teratas</h2>
+      <div style="height:12px"></div>
+      <div class="leaderboard">
+        <div class="leader"><div class="avatar">1</div><div><strong>das******</strong><div class="muted">Total Robux R$ 50,000 — CHAMPION</div></div></div>
+        <div class="leader"><div class="avatar">2</div><div><strong>lox*****</strong><div class="muted">Total Robux R$ 40,000 — RUNNER-UP</div></div></div>
+        <div class="leader"><div class="avatar">3</div><div><strong>Mr_*****</strong><div class="muted">Total Robux R$ 18,000 — THIRD</div></div></div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mt-16 text-center">
-      <h3 class="text-2xl font-bold neon">Contact Me</h3>
-      <p class="mt-2 text-slate-300 neon">Contact me on WhatsApp or tiktok</p>
-      <div class="flex justify-center gap-4 mt-4">
-        <a href="https://wa.me/+6289666271410?text=Halo%20saya%20mau%20joki%20The%20Spike" class="btn-neon px-6 py-3 rounded-lg">WhatsApp</a>
-        <a href="https://www.tiktok.com/@imyxuannn" class="btn-neon px-6 py-3 rounded-lg">TikTok</a>
+    <section id="why" class="section">
+      <h2>Aman, Cepat, dan Transparan</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+        <div class="card" style="flex:1;min-width:220px">Invoice Asli Lengkap<br><div class="muted">Setiap transaksi dilengkapi</div></div>
+        <div class="card" style="flex:1;min-width:220px">Proses Bergaransi<br><div class="muted">Pengisian cepat & terpercaya</div></div>
+        <div class="card" style="flex:1;min-width:220px">Fast Respon 24/7<br><div class="muted">Support siap membantu</div></div>
       </div>
     </section>
+
+    <section id="payments" class="section">
+      <h2>Pembayaran</h2>
+      <div style="height:10px"></div>
+      <div class="payments">
+        <div class="pay">BCA</div>
+        <div class="pay">BNI</div>
+        <div class="pay">Gopay</div>
+        <div class="pay">Dana</div>
+        <div class="pay">OVO</div>
+        <div class="pay">QRIS</div>
+        <div class="pay">ShopeePay</div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px" class="card">
+          <strong>Hubungi Kami</strong>
+          <div class="muted">WhatsApp: +62 896-6627-1410</div>
+          <div style="height:12px"></div>
+          <form onsubmit="alert('Form demo — integrasikan backend untuk berfungsi');return false;">
+            <input placeholder="Nama" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <input placeholder="Email / WA" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <textarea placeholder="Pesan" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px"></textarea>
+            <button class="btn primary" type="submit">Kirim</button>
+          </form>
+        </div>
+        <div style="flex:1;min-width:260px" class="card">
+          <strong>Tentang Kami</strong>
+          <p class="muted">Rosstoreid.com adalah penyedia layanan pembelian item dan mata uang digital game secara independen. Kami tidak terkait resmi dengan Roblox Corporation.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="py-8 text-center text-slate-500 text-sm">
-    © <span id="year"></span> Yxuannn Store — All Rights Reserved.
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div class="muted">@2025 All Right Reserved. CV ROSSTOREID</div>
+      <div class="muted">Kebijakan Privasi • FAQ</div>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // small demo countdown to next day midnight
+    function updateCountdown(){
+      const now=new Date();
+      const t=new Date();t.setHours(23,59,59,999);
+      const diff=Math.max(0,t-now);
+      const h=Math.floor(diff/3600000);const m=Math.floor(diff%3600000/60000);const s=Math.floor(diff%60000/1000);
+      document.getElementById('countdown').innerHTML=`<div class=\"seg\"><div style=\"font-size:18px\">${String(h).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Jam</div></div><div class=\"seg\"><div style=\"font-size:18px\">${String(m).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Menit</div></div><div class=\"seg\"><div style=\"font-size:18px\">${String(s).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Detik</div></div>`
+    }
+    setInterval(updateCountdown,1000);updateCountdown();
   </script>
 </body>
 </html>
