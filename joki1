@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ImYxuann — Ridwan Akbar Maolana</title>
+  <meta name="description" content="Ridwan Akbar Maolana — hero, product grid, leaderboard, payments, contact." />
+  <style>
+    :root{--accent:#ff4d4f;--dark:#0f1724;--muted:#6b7280;--card:#0b1220}
+    *{box-sizing:border-box}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;background:#071023;color:#e6eef8}
+    header{background:linear-gradient(90deg,#071023 0%,#0b1330 100%);padding:20px 16px;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9aa2);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:inherit;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--accent);color:#071023}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;padding:48px 0}
+    .hero h1{font-size:28px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn.primary{background:var(--accent);color:#071023}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .countdown{display:flex;gap:8px;font-weight:800}
+    .countdown .seg{background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:8px}
+
+    /* Products */
+    .section{padding:32px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+    .product{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px}
+    .product h4{margin:8px 0 6px;font-size:15px}
+    .price{font-weight:800}
+
+    /* Leaderboard */
+    .leaderboard{display:flex;flex-direction:column;gap:10px}
+    .leader{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent)}
+    .avatar{width:44px;height:44px;border-radius:8px;background:linear-gradient(90deg,#334155,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .muted{color:var(--muted)}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03)}
+    .payments{display:flex;gap:10px;flex-wrap:wrap}
+    .pay{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;font-weight:700}
+
+    /* responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.hero + .card{order:3}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="yxuannstore" alt="logo yxuannstore.png" class="h-14 w-auto rounded-lg">
+        <div>
+          <div style="font-weight:800">yxuannstore</div>
+          <div style="font-size:12px;color:var(--muted)">Since 2017 — aman & cepat</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Produk</a>
+        <a href="#leaderboard">Peringkat</a>
+        <a href="#why">Kenapa Beli</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Topup Robux & Item Game — Cepat, Aman, Garansi</h1>
+        <p>Dapatkan Robux, Premium, dan item lainnya dengan harga terbaik. Proses cepat — banyak testimoni — bayar lewat transfer, e-wallet, atau minimarket.</p>
+        <a class="btn primary" href="#products">Lihat Produk</a>
+        <div style="height:16px"></div>
+        <div class="card">
+          <strong>FLASH SALE</strong>
+          <div style="height:8px"></div>
+          <div class="countdown" id="countdown">
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Jam</div></div>
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Menit</div></div>
+            <div class="seg"><div style="font-size:18px">00</div><div class="muted" style="font-size:11px">Detik</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Pilihan Produk</h3>
+        <div style="height:10px"></div>
+        <div class="grid">
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Robux Instant</h4><div class="muted">Topup cepat via API</div><div class="price">Rp. 90.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Roblox Premium</h4><div class="muted">Langganan premium</div><div class="price">Rp. 185.000</div></div>
+          <div class="product"><div style="height:90px;background:linear-gradient(90deg,#071023,#0b1220);border-radius:8px"></div><h4>Giftcard</h4><div class="muted">Voucher resmi</div><div class="price">Rp. 50.000</div></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="leaderboard" class="section">
+      <h2>Pembeli Robux Mingguan Teratas</h2>
+      <div style="height:12px"></div>
+      <div class="leaderboard">
+        <div class="leader"><img src="alberteinstein.jpg"></div></div><div><strong>Albert Einstein</strong><div class="muted">Total Robux Rp. 15.000.000 — Germany</div></div></div>
+        <div class="leader"><img src="hirohito.jpg"></div><div><strong>Hirohito</strong><div class="muted">Total Robux Rp. 2.000.000 — Japan</div></div></div>
+        <div class="leader"><img src="adolfhitler.jpg"></div><div><strong>Adolf Hitler</strong><div class="muted">Total Robux Rp. 5.500.000 — Germany</div></div></div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <h2>Aman, Cepat, dan Transparan</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+        <div class="card" style="flex:1;min-width:220px">Invoice Asli Lengkap<br><div class="muted">Setiap transaksi dilengkapi</div></div>
+        <div class="card" style="flex:1;min-width:220px">Proses Bergaransi<br><div class="muted">Pengisian cepat & terpercaya</div></div>
+        <div class="card" style="flex:1;min-width:220px">Fast Respon 24/7<br><div class="muted">Support siap membantu</div></div>
+      </div>
+    </section>
+
+    <section id="payments" class="section">
+      <h2>Pembayaran</h2>
+      <div style="height:10px"></div>
+      <div class="payments">
+        <div class="pay">Gopay</div>
+        <div class="pay">Dana</div>
+        <div class="pay">OVO</div>
+        <div class="pay">QRIS</div>
+        <div class="pay">ShopeePay</div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px" class="card">
+          <strong>Hubungi Kami</strong>
+          <div class="muted">WhatsApp: +62 896-6627-1410</div>
+          <div style="height:12px"></div>
+          <form onsubmit="alert('Form demo — integrasikan backend untuk berfungsi');return false;">
+            <input placeholder="yxuann" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <input placeholder="+62 896-6627-1410" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px">
+            <textarea placeholder="Pesan" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-bottom:8px"></textarea>
+            <button class="btn primary" type="submit">Kirim</button>
+          </form>
+        </div>
+        <div style="flex:1;min-width:260px" class="card">
+          <strong>Tentang Kami</strong>
+          <p class="muted">yxuannstore adalah penyedia layanan pembelian item dan mata uang digital game secara independen. Kami tidak terkait resmi dengan Roblox Corporation.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div class="muted">@2025 All Right Reserved. CV YXUANNSTORE</div>
+      <div class="muted">Kebijakan Privasi • FAQ</div>
+    </div>
+  </footer>
+
+  <script>
+    // small demo countdown to next day midnight
+    function updateCountdown(){
+      const now=new Date();
+      const t=new Date();t.setHours(23,59,59,999);
+      const diff=Math.max(0,t-now);
+      const h=Math.floor(diff/3600000);const m=Math.floor(diff%3600000/60000);const s=Math.floor(diff%60000/1000);
+      document.getElementById('countdown').innerHTML=`<div class=\"seg\"><div style=\"font-size:18px\">${String(h).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Jam</div></div><div class=\"seg\"><div style=\"font-size:18px\">${String(m).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Menit</div></div><div class=\"seg\"><div style=\"font-size:18px\">${String(s).padStart(2,'0')}</div><div class=\"muted\" style=\"font-size:11px\">Detik</div></div>`
+    }
+    setInterval(updateCountdown,1000);updateCountdown();
+  </script>
+</body>
+</html>
