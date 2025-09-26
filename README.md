@@ -1,1 +1,1 @@
-# Joki The Spike Cross by Yxuann
+# Ridwan Akbar Maolana
